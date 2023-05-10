@@ -1,0 +1,17 @@
+:root {
+    --bg-color: #c3cbe1;
+   }
+   
+   /* The foundational CSS for the webpage */
+   * {
+       box-sizing: border-box;
+       padding: 0;
+       margin: 0;
+   }
+   
+   
+   /* Set the background color for the webpage */
+   body {
+       background-color: var(--bg-color);
+   }
+   
