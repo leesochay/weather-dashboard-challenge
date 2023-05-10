@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #c3cbe1;
+    --bg-color: #d0d6e7;
    }
    
    /* The foundational CSS for the webpage */
@@ -14,4 +14,14 @@
    body {
        background-color: var(--bg-color);
    }
+
+/* Format the webpage header */
+header {
+	padding: 20px;
+	text-align: center;
+	background-color: #261360;
+    color: #ffffff;
+    font-size: 50px;
+	font-family: 'Arial', 'Ebrima', 'Lucida Console';
+}
    
