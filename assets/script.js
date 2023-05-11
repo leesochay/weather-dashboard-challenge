@@ -1,17 +1,17 @@
-// get city name from text area
 var today = dayjs();
 var fetchButton = document.getElementById('fetch-button');
 
+// function for the current weather conditions
 function getCityCurrent(){
-    
+// clear any data for a fresh start  
     $("div").empty();
-    
+ 
+// The data from the search
     var city = document.getElementById('cityName').value;
     var state = document.getElementById('stateCode').value;
-    console.log(city);
-   
+
+// Obtain the data from the openweathermap API for current weather conditions
     var requestCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "," + state + ",US&appid=dfff74363215fd3bf8e8259c31526b0b&units=imperial";
-    
     
     fetch(requestCurrent)
     .then(function (response) {
@@ -19,9 +19,10 @@ function getCityCurrent(){
           })
     .then(function (data) {
          console.log(data)
-
+// Day.js formatting for the current day
          $('#currentDay').text(today.format('dddd, MMMM D YYYY'));
 
+// Current weather conditions elements for html and display
         var currentCityEl = document.createElement('p');
         currentCityEl.setAttribute("style", "font-size:28px");
         currentCityEl.innerHTML = data.name;
@@ -45,30 +46,15 @@ function getCityCurrent(){
         currentHumidityEl.setAttribute("style", "font-size:20px");
         currentHumidityEl.innerHTML = "Humidity: " + data.main.humidity + "%";
         document.getElementById("current-conditions").appendChild(currentHumidityEl);
-
-
-
-
-console.log(data.name);
-localStorage.setItem('currentWeather', JSON.stringify({city: data.name, temperature: data.main.temp}));
-var currentCityWd = JSON.parse(localStorage.getItem("currentWeather"));
-document.getElementById("search-container").textContent = currentCityWd.temperature;
-
-
-
-
-
-
-
             });
         }
 
-        
+//  Function for the forecast weather data
         function getCityForecast(){
             $("div").empty();
             var cityFor = document.getElementById('cityName').value;
             var stateFor = document.getElementById('stateCode').value;
-           
+// API request for forecast data
             var requestCurrent = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityFor + "," + stateFor + ",US&appid=dfff74363215fd3bf8e8259c31526b0b&units=imperial";
             
             fetch(requestCurrent)
@@ -78,24 +64,11 @@ document.getElementById("search-container").textContent = currentCityWd.temperat
             .then(function (data) {
                  console.log(data)
         
-                var forecastCityEl = document.createElement('p');
-                forecastCityEl.innerHTML = data.city.name;
-                document.body.appendChild(forecastCityEl);
-
-
-    
-        
 // For loop for 5 return values
-
 for (let index = 0; index < data.list.length; index++) {
-
+// obtain consistent forecast based on time of day    
     let dateTest = data.list[index].dt_txt.includes("18:00:00", 0);
-
-
-
-
 if (dateTest) {
-                console.log(index);
                 var dayForecast = document.createElement('div');
                 dayForecast.setAttribute("id", index);
                 dayForecast.setAttribute("class", "forecast-box");
@@ -125,16 +98,10 @@ if (dateTest) {
                 forecastHumidityEl.innerHTML = "Humidity: " + data.list[index].main.humidity + "%";
                 document.getElementById(index).appendChild(forecastHumidityEl);
             }
-
             }
-
                     });
                 }
 
-
-
-
-
-
+// Event lsiteners to call the API functions upon the search button click
 fetchButton.addEventListener('click', getCityCurrent);
 fetchButton.addEventListener('click', getCityForecast);
