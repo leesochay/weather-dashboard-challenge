@@ -15,7 +15,8 @@
     </header>
 
 <main>
- <aside>
+
+    <aside>
 <h2>Search for a city:</h2>
 <textarea id="cityName" placeholder="city"></textarea>
 <textarea id="stateCode" placeholder="state"></textarea>
@@ -23,18 +24,32 @@
 <hr>
 <p  id="search-container"></p>
 </aside>
+
+
 <section id="content-container">
-<section class="content" id="current-conditions">
+<section class="content">
 <h2>Current Conditions:</h2>
+<p id="currentDay"></p>
+<div id="current-conditions"></div>
 </section>
 
-<section class="content" id="forecast-conditions">
+
+<section class="content">
 <h2>5-Day Forcast:</h2>
+<div id="forecast-conditions"></div>
 </section>
 </section>
+
+
 </main>
 </body>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-<script src="./assets/script.js"></script>
+<script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js"></script>
 </html>
