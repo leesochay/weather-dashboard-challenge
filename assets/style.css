@@ -20,18 +20,16 @@ font-size: 30px;
 
    }
 
-   main {
-    /* Turns this element into a flexbox
-    display: flex;
-    Forces elements to the next line if they don't fit
-    flex-wrap: wrap;
-    margin-top: 2%; */
+/* Main container with flex for positioning and layout */
 
+   main {
         width: 100%;
         display: flex;
         justify-content: left;
         
  }
+
+ /* Flex container for the sections with current and forecasts */
 
 #content-container {
     display: flex;
@@ -40,6 +38,7 @@ font-size: 30px;
     margin: 20px 20px 20px 0;
 }
 
+/* Sections for the content in current and forecasts */
 
  .content {
     margin-bottom: 20px;
@@ -61,6 +60,8 @@ header {
 	font-family: 'Arial', 'Ebrima', 'Lucida Console';
 }
 
+/* Styling for the search box area */
+
 aside {
     margin: 20px 0 20px 20px;
     padding: 20px;
@@ -71,6 +72,8 @@ aside {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--bg-color);
 }
+
+/* Styling for current and futute buttons for the page */
 
 button {
     background-color: #6fa1e2;
@@ -87,6 +90,8 @@ button {
     border-radius: 12px;
   }
 
+/* Styling for created elements for current conditions */
+
 #current-conditions {
     margin: 25px 0;
 }
@@ -94,6 +99,8 @@ button {
 #currentDay {
     font-size: 20px;
 }
+
+/* Styling for created elements for forecast conditions */
 
 #forecast-conditions {
     display: flex;
