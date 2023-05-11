@@ -15,7 +15,7 @@ I have included a screenshot of the calendar page albeit with the past time colo
 
 ![Lee Sochay Weather Dashboard Challenge screenshot](assets/weather-dashboard-screenshot.png)
 
-The project in process can be viewed at [leesochay.github.io/xxx](https://leesochay.github.io/weather-dashboard-challenge/).
+The project in process can be viewed at [leesochay.github.io/weather-dashboard-challenge/](https://leesochay.github.io/weather-dashboard-challenge/)).
 
 ## License
 
