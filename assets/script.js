@@ -36,6 +36,11 @@ function getCityCurrent(){
         currentHumidityEl.innerHTML = "Humidity: " + data.main.humidity + "%";
         document.body.appendChild(currentHumidityEl);
 
+console.log(data.name);
+localStorage.setItem('currentWeather', JSON.stringify({city: data.name, temperature: data.main.temp}));
+var currentCityWd = JSON.parse(localStorage.getItem("currentWeather"));
+document.getElementById("search-container").textContent = currentCityWd.temperature;
+
             });
         }
 
@@ -59,6 +64,7 @@ function getCityCurrent(){
                 document.body.appendChild(forecastCityEl);
 
 
+    
     
         
 // For loop for 5 return values
