@@ -13,7 +13,7 @@ weather conditions from search history.
 
 I have included a screenshot of the calendar page albeit with the past time color code for all timeblocks.
 
-![Lee Sochay Workday Scheduler page screenshot](/work-day-scheduler-screenshot.png)
+![Lee Sochay Weather Dashboard Challenge screenshot](/weather-day-scheduler-screenshot.png)
 
 The project in process can be viewed at [leesochay.github.io/xxx](https://leesochay.github.io/weather-dashboard-challenge/).
 
